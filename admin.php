@@ -43,7 +43,7 @@
 
                 <div class="menu">
                     <li><a href="admin.php">Admin Login</a></li>
-                    <li><a href="cleint.php">Cleint Login</a></li>
+                    <li><a href="client.php">Cleint Login</a></li>
                     <li><a href="pricing.php">Pricing</a></li>
                     <li class="services">
                         <a href="apartment.php">Apartment</a>

@@ -42,7 +42,7 @@
 
                 <div class="menu">
                     <li><a href="admin.php">Admin Login</a></li>
-                    <li><a href="cleint.php">Cleint Login</a></li>
+                    <li><a href="client.php">Cleint Login</a></li>
                     <li><a href="pricing.php">Pricing</a></li>
                     <li class="services">
                         <a href="apartment.php">Apartment</a>
@@ -65,7 +65,58 @@
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
     <h1 class="heading">APARTMENT</h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-
+<hr>
+<hr>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image/1.jpg" class="d-block w-100" alt="banner1">
+            <div class="carousel-caption">
+              
+              
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/2.jpg" class="d-block w-100" alt="banner2">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/3.jpg" class="d-block w-100" alt="banner3">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/4.jpg" class="d-block w-100" alt="banner4">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/6.jpg" class="d-block w-100" alt="banner5">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/7.jpg" class="d-block w-100" alt="banner6">
+            <div class="carousel-caption">
+             
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     <!-- Contact  -->
@@ -182,9 +233,116 @@
         </section>
     </footer>
 
-    <script src="/index.js"></script>
+    <script >
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+       $('#navbar').removeClass('fixed-top');
+    } else {
+       $('#navbar').addClass('fixed-top');
+    }
+});
+
+$("#video_projects .owl-carousel").owlCarousel({
+   loop: true,
+   nav: false,
+   dots: false,
+   responsive : {
+       0: {
+           items: 1
+       },
+       600: {
+           items: 2
+       },
+       1000 : {
+           items: 3
+       }
+   }
+});
+$("#LIZ .owl-carousel").owlCarousel({
+   loop: true,
+   nav: false,
+   dots: false,
+   responsive : {
+       0: {
+           items: 3
+       },
+       600: {
+           items: 5
+       },
+       1000 : {
+           items: 7
+       }
+   }
+});
+
+const changePic = (e)=>{
+    document.getElementById("main_image").src = e;
+}
+
+
+    </script>
 </body>
 <style>
+
+
+
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20rem;
+  left: -95rem;
+}
+
+.carousel-indicators li {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.carousel-caption {
+  top: 18rem;
+  text-align: left;
+}
+
+.carousel-caption h1 {
+  font-size: 4.5rem;
+  font-family: "Balsamiq Sans", cursive;
+  word-spacing: 0.1rem;
+  color: whitesmoke;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  max-width: 60rem;
+  color: whitesmoke;
+}
+
+.carousel-caption button {
+  background: #82589f;
+  color: #fff;
+}
+
+.second_row button {
+  background: blue;
+  color: #000;
+}
+
+.carousel-caption button,
+.second_row button {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  margin: 2rem 1rem 0 0;
+  border: 0;
+  outline: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.carousel-caption button:hover {
+  background: blue;
+  color: #000;
+}
+
     * {
   margin: 0;
   padding: 0;

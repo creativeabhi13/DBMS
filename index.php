@@ -39,7 +39,7 @@
 
                 <div class="menu">
                     <li><a href="admin.php">Admin Login</a></li>
-                    <li><a href="cleint.php">Cleint Login</a></li>
+                    <li><a href="client.php">Cleint Login</a></li>
                     <li><a href="pricing.php">Pricing</a></li>
                     <li class="services">
                         <a href="apartment.php">Apartment</a>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="col-md-6 col-12 mx-auto contact_form p-3">
                             <h1 class="heading">Let us know</h1>
-                            <form action= method=post>
+                            <form action=connect.php method=post>
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="name" class="form-control" id="name" name="name">
