@@ -10,43 +10,39 @@
 
 <?php 
 
-		// servername => localhost
-		// username => root
-		// password => empty
-		// database name => staff
+		
 		$conn = mysqli_connect("localhost", "root", "", "apt_mgmt");
 		
-		// Check connection
+		
 		if($conn === false){
 			die("ERROR: Could not connect. "
 				. mysqli_connect_error());
 		}
 		
-		// Taking all 5 values from the form data(input)
-		$first_name = $_REQUEST['name'];
-		$last_name = $_REQUEST['email'];
-		$gender = $_REQUEST['subject'];
-		$address = $_REQUEST['message'];
-		// $email = $_REQUEST['email'];
 		
-		// Performing insert query execution
-		// here our table name is college
-		$sql = "INSERT INTO contact_us VALUES ('$first_name',
-			'$last_name','$gender','$address')";
+		$s1 = $_REQUEST['name'];
+		$s2 = $_REQUEST['email'];
+		$s3 = $_REQUEST['subject'];
+		$s4 = $_REQUEST['message'];
+	
+		
+		
+		$sql = "INSERT INTO contact_us VALUES ('$s1',
+			'$s2','$s3','$s4')";
 		
 		if(mysqli_query($conn, $sql)){
 			echo "<h3>data stored in a database successfully."
 				. " Please browse your localhost php my admin"
 				. " to view the updated data</h3>";
 
-			echo nl2br("\n$first_name\n $last_name\n "
-				. "$gender\n $address\n $email");
+			echo nl2br("\n$s1\n $s2\n "
+				. "$s3\n $s4\n");
 		} else{
 			echo "ERROR: Hush! Sorry $sql. "
 				. mysqli_error($conn);
 		}
 		
-		// Close connection
+		
 		mysqli_close($conn);
 		?>
 

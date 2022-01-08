@@ -142,7 +142,7 @@
                         </div>
                         <div class="col-md-6 col-12 mx-auto contact_form p-3">
                             <h1 class="heading">Let us know</h1>
-                            <form action=connect.php method=post>
+                            <form action= method=post>
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="name" class="form-control" id="name" name="name">
@@ -246,7 +246,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 2000); 
 } 
     </script>
 </body>
