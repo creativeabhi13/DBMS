@@ -42,30 +42,42 @@
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
                 <div class="menu">
-                    <li><a href="admin.php">Admin Login</a></li>
-                    <li><a href="client.php">Cleint Login</a></li>
-                    <li><a href="pricing.php">Pricing</a></li>
+                    <li><a href="admin.php">ADDTENANT</a></li>
+                    <li><a href="client.php">ADDDEPENDENT</a></li>
+                    <li><a href="pricing.php">FINANCE</a></li>
                     <li class="services">
                         <a href="apartment.php">Apartment</a>
-
-                        <ul class="dropdown">
-                            <li><a href="apartment.php">1-BHK </a></li>
-                            <li><a href="apartment.php">2-BHK</a></li>
-                            <li><a href="apartment.php">3-BHK</a></li>
-                            <li><a href="apartment.php">FLOOR WISE </a></li>
-                            <li><a href="apartment.php">FULL VILLA</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.php">About Us</a></li>
+                  </li>
+                    
                     <li><a href="#contact">Contact Us</a></li>
                 </div>
-            </ul>
-        </nav>
+    </div>
+    </ul>
+    </nav>
     </div>
 
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-    <h1 class="heading">CLEINT LOGIN </h1>
+    <h1 class="heading">Add Dependent </h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
+                        <div class="col-md-6 col-12 mx-auto contact_form p-3">
+                            <h1 class="heading">Enter Dependent Details</h1>
+                            <form action=connect1.php method=post>
+                                <div class="form-group">
+                                    <label for="tname">Tenant Number</label>
+                                    <input type="number" class="form-control" id="name" name="tno" placeholder="Enter The Tenant Number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="aptno">Dependent Name</label>
+                                    <input type="name" class="form-control" id="name" name="dname" placeholder="Enter The Dependent Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dphone">Dependent Phone Number</label>
+                                    <input type="number" class="form-control" id="" name="dphone" placeholder="Enter The Dependent Phone Number">
+                                </div>
+                               
+                                <button>Submit</button>
+                            </form>
+                        </div>
 
 
 
@@ -92,23 +104,23 @@
                         </div>
                         <div class="col-md-6 col-12 mx-auto contact_form p-3">
                             <h1 class="heading">Let us know</h1>
-                            <form action=connect.php method=post>
+                            <form action=connect3.php method=post>
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="name" class="form-control" id="name" name="name">
+                                    <input type="name" class="form-control" id="name" name="name" placeholder="Enter Your Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="subject">Subject</label>
-                                    <input type="text" class="form-control" id="subject" name="subject">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter The Subject">
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message</label>
                                     <textarea class="form-control" id="message" cols="30" rows="10"
-                                        name="message"></textarea>
+                                        name="message" placeholder="Enter The Message"></textarea>
                                 </div>
                                 <button>Submit</button>
                             </form>
@@ -187,6 +199,10 @@
 </body>
 
 <style>
+  .form-group{
+    font-weight:bold;
+    font-style:sans-serif;
+  }
     * {
   margin: 0;
   padding: 0;
@@ -377,7 +393,7 @@ input[type="checkbox"] {
 }
 
 #contact .contact_form {
-  background: red;
+  background: yellowgreen;
 }
 
 #contact form label {

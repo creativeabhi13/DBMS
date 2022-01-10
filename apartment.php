@@ -41,82 +41,78 @@
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
                 <div class="menu">
-                    <li><a href="admin.php">Admin Login</a></li>
-                    <li><a href="client.php">Cleint Login</a></li>
-                    <li><a href="pricing.php">Pricing</a></li>
+                    <li><a href="admin.php">ADDTENANT</a></li>
+                    <li><a href="client.php">ADDDEPENDENT</a></li>
+                    <li><a href="pricing.php">FINANCE</a></li>
                     <li class="services">
                         <a href="apartment.php">Apartment</a>
-
-                        <ul class="dropdown">
-                            <li><a href="apartment.php">1-BHK </a></li>
-                            <li><a href="apartment.php">2-BHK</a></li>
-                            <li><a href="apartment.php">3-BHK</a></li>
-                            <li><a href="apartment.php">FLOOR WISE </a></li>
-                            <li><a href="apartment.php">FULL VILLA</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.php">About Us</a></li>
+                  </li>
+                    
                     <li><a href="#contact">Contact Us</a></li>
                 </div>
-            </ul>
-        </nav>
+    </div>
+    </ul>
+    </nav>
     </div>
 
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
     <h1 class="heading">APARTMENT</h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-<hr>
-<hr>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="image/1.jpg" class="d-block w-100" alt="banner1">
-            <div class="carousel-caption">
-              
-              
-              
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="image/2.jpg" class="d-block w-100" alt="banner2">
-            <div class="carousel-caption">
-              
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="image/3.jpg" class="d-block w-100" alt="banner3">
-            <div class="carousel-caption">
-              
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="image/4.jpg" class="d-block w-100" alt="banner4">
-            <div class="carousel-caption">
-              
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="image/6.jpg" class="d-block w-100" alt="banner5">
-            <div class="carousel-caption">
-              
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="image/7.jpg" class="d-block w-100" alt="banner6">
-            <div class="carousel-caption">
-             
-            </div>
-          </div>
+
+<div class="slideshow-container">
+
+        
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="image/1.jpg" style="width:100%; height:100%">
+            <div class="text">Caption one</div>
         </div>
-      </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 7</div>
+            <img src="image/2.jpg" style="width:100%; height:100%">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 7</div>
+            <img src="image/3.jpg" style="width:100%; height:100%">
+            <div class="text">Caption Three</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="image/4.jpg" style="width:100%; height:100%">
+            <div class="text">Caption four</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="image/5.jpg" style="width:100% ; height:100%">
+            <div class="text">Caption five</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="image/6.jpg" style="width:100%; height:100%">
+            <div class="text">Caption six</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 7</div>
+          <img src="image/7.jpg" style="width:100%; height:100%">
+            <div class="text">Caption seven</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
 
 
     <!-- Contact  -->
@@ -142,23 +138,23 @@
                         </div>
                         <div class="col-md-6 col-12 mx-auto contact_form p-3">
                             <h1 class="heading">Let us know</h1>
-                            <form action=connect.php method=post>
+                            <form action=connect3.php method=post>
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="name" class="form-control" id="name" name="name">
+                                    <input type="name" class="form-control" id="name" name="name" placeholder="Enter Your Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="subject">Subject</label>
-                                    <input type="text" class="form-control" id="subject" name="subject">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter The Subject">
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message</label>
                                     <textarea class="form-control" id="message" cols="30" rows="10"
-                                        name="message"></textarea>
+                                        name="message" placeholder="Enter The Message"></textarea>
                                 </div>
                                 <button>Submit</button>
                             </form>
@@ -234,57 +230,31 @@
     </footer>
 
     <script >
-$(window).scroll(function(){
-    if ($(this).scrollTop() > 100) {
-       $('#navbar').removeClass('fixed-top');
-    } else {
-       $('#navbar').addClass('fixed-top');
-    }
-});
+   
 
-$("#video_projects .owl-carousel").owlCarousel({
-   loop: true,
-   nav: false,
-   dots: false,
-   responsive : {
-       0: {
-           items: 1
-       },
-       600: {
-           items: 2
-       },
-       1000 : {
-           items: 3
-       }
-   }
-});
-$("#LIZ .owl-carousel").owlCarousel({
-   loop: true,
-   nav: false,
-   dots: false,
-   responsive : {
-       0: {
-           items: 3
-       },
-       600: {
-           items: 5
-       },
-       1000 : {
-           items: 7
-       }
-   }
-});
+ var slideIndex = 0;
+showSlides();
 
-const changePic = (e)=>{
-    document.getElementById("main_image").src = e;
-}
-
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); 
+} 
 
     </script>
 </body>
 <style>
 
-
+.form-group{
+    font-weight:bold;
+    font-style:sans-serif;
+  }
 
 
 .carousel-indicators {
@@ -533,7 +503,7 @@ input[type="checkbox"] {
 }
 
 #contact .contact_form {
-  background: red;
+  background: yellowgreen;
 }
 
 #contact form label {

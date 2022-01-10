@@ -20,30 +20,44 @@
 		}
 		
 		
-		$s1 = $_REQUEST['name'];
-		$s2 = $_REQUEST['email'];
-		$s3 = $_REQUEST['subject'];
-		$s4 = $_REQUEST['message'];
+		$tname = $_REQUEST['tname'];
+		$aptno = $_REQUEST['aptno'];
+		$tphone = $_REQUEST['tphone'];
+		$type = $_REQUEST['type'];
+		$block = $_REQUEST['block'];
+		$rent = $_REQUEST['rent'];
+		$date = $_REQUEST['date'];
+		$date = date("d-m-Y",strtotime($date));
 	
 		
+		for ($i = 1; $i <= 99999; $i++)
+		{
+            $tno = mysqli_query($conn,"SELECT TNO FROM tenant WHERE TNO = '$tname'");
+			if (mysqli_num_rows($tno) == 0)
+			{
+				$table1 = "INSERT INTO tenant VALUES ($i,'$tname', $tphone)";
+				mysqli_query($conn, $table1);
+				$table2 = "INSERT INTO apartment VALUES ($aptno,$i, '$type',$block)";
+				mysqli_query($conn, $table2);
+				$table3 = "INSERT INTO finance VALUES ($date,0,0,0,$aptno)";
+				mysqli_query($conn, $table3);
+				$table4 = "INSERT INTO rent VALUES ($date,$i,'$rent')";
+				mysqli_query($conn, $table4);
+				break;
+            }
 		
-		$sql = "INSERT INTO contact_us VALUES ('$s1',
-			'$s2','$s3','$s4')";
-		
-		if(mysqli_query($conn, $sql)){
-			echo "<h3>data stored in a database successfully."
-				. " Please browse your localhost php my admin"
-				. " to view the updated data</h3>";
+			echo "<h1>DATA STORED SUCCESSFULLY !"
+				. " </h1>";
 
-			echo nl2br("\n$s1\n $s2\n "
-				. "$s3\n $s4\n");
-		} else{
-			echo "ERROR: Hush! Sorry $sql. "
-				. mysqli_error($conn);
-		}
+			
+		
+
+			
+
+        }
 		
 		
-		mysqli_close($conn);
+		;mysqli_close($conn);
 		?>
 
 

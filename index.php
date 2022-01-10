@@ -38,21 +38,13 @@
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
                 <div class="menu">
-                    <li><a href="admin.php">Admin Login</a></li>
-                    <li><a href="client.php">Cleint Login</a></li>
-                    <li><a href="pricing.php">Pricing</a></li>
+                    <li><a href="admin.php">ADDTENANT</a></li>
+                    <li><a href="client.php">ADDDEPENDENT</a></li>
+                    <li><a href="pricing.php">FINANCE</a></li>
                     <li class="services">
                         <a href="apartment.php">Apartment</a>
-
-                        <ul class="dropdown">
-                            <li><a href="apartment.php">1-BHK </a></li>
-                            <li><a href="apartment.php">2-BHK</a></li>
-                            <li><a href="apartment.php">3-BHK</a></li>
-                            <li><a href="apartment.php">FLOOR WISE </a></li>
-                            <li><a href="apartment.php">FULL VILLA</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.php">About Us</a></li>
+                  </li>
+                    
                     <li><a href="#contact">Contact Us</a></li>
                 </div>
     </div>
@@ -136,29 +128,29 @@
                                     <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
                                         marginheight="0" marginwidth="0"
                                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14306.47724495984!2d84.1872534!3d26.3064385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1ac8d21b370de87d!2sCreativeabhi13!5e0!3m2!1sen!2sin!4v1635618923096!5m2!1sen!2sin"></iframe>
-
+                         
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-12 mx-auto contact_form p-3">
                             <h1 class="heading">Let us know</h1>
-                            <form action=connect.php method=post>
+                            <form action=connect3.php method=post>
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="name" class="form-control" id="name" name="name">
+                                    <input type="name" class="form-control" id="name" name="name" placeholder="Enter Your Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="subject">Subject</label>
-                                    <input type="text" class="form-control" id="subject" name="subject">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter The Subject">
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message</label>
                                     <textarea class="form-control" id="message" cols="30" rows="10"
-                                        name="message"></textarea>
+                                        name="message" placeholder="Enter The Message"></textarea>
                                 </div>
                                 <button>Submit</button>
                             </form>
@@ -444,7 +436,7 @@ input[type="checkbox"] {
 }
 
 #contact .contact_form {
-  background: red;
+  background: yellowgreen;
 }
 
 #contact form label {
