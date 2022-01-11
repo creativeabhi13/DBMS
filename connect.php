@@ -38,17 +38,17 @@ session_start();
 			
 			{
 				$table1 = "INSERT INTO tenant VALUES ($i,'$tname', $tphone)";
-				mysqli_query($conn, $table1);
+				
 				$table2 = "INSERT INTO apartment VALUES ($aptno,$i, '$type',$block)";
-				mysqli_query($conn, $table2);
+				
                 if(mysqli_query($conn, $table1)){
                     $_SESSION['status']="Data Inserted Successfully";
-                    header('location: adddependent.php');
+                    header('location: addtenant.php');
 			    } 
-				break;
+			
 				if(mysqli_query($conn, $table2)){
                     $_SESSION['status']="Data Inserted Successfully";
-                    header('location: adddependent.php');
+                    header('location: addtenant.php');
 			    } 
 				break;
 			

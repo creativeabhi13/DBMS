@@ -35,17 +35,25 @@ session_start();
 	
 	
 				$table1 = "INSERT INTO finance VALUES ($date,$repaircharges, $staff_sal,$misc_charges,$aptno)";
-				mysqli_query($conn, $table1);
+			
              
 				$table2 = "INSERT INTO rent VALUES ($date,$tno,$rent)";
-				mysqli_query($conn, $table2);
-                
+			
+                if(mysqli_query($conn, $table1)){
+                    $_SESSION['status']="Data Inserted Successfully";
+                    header('location: pricing.php');
+			    } 
+			
+				if(mysqli_query($conn, $table2)){
+                    $_SESSION['status']="Data Inserted Successfully";
+                    header('location: pricing.php');
+			    } 
             
 
-                 echo 
+                /*  echo 
 				    "DATA SAVED SUCCESSFULLY";
                 echo nl2br("\n$tno\n $aptno\n "
-				    ."$staff_sal\n $misc_charges\n $repaircharges \n$rent\n$date");
+				    ."$staff_sal\n $misc_charges\n $repaircharges \n$rent\n$date"); */
 			
 				 
 		
