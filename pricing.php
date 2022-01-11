@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if(isset($_SESSION['status']))
+{
+  echo $_SESSION['status'];
+  unset($_SESSION['status']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +37,7 @@
         <nav class="navbar">
 
             <div class="logo">
-                <a href="index.php">Abhishek & Aditya Group</a>
+                <a href="index.php" target="blank">Abhishek & Aditya Group</a>
             </div>
 
             <ul class="nav-links">
@@ -41,11 +46,11 @@
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
                 <div class="menu">
-                    <li><a href="admin.php">ADDTENANT</a></li>
-                    <li><a href="client.php">ADDDEPENDENT</a></li>
-                    <li><a href="pricing.php">FINANCE</a></li>
+                    <li><a href="addtenant.php" target="blank">ADDTENANT</a></li>
+                    <li><a href="adddependent.php" target="blank">ADDDEPENDENT</a></li>
+                    <li><a href="pricing.php" target="blank">FINANCE</a></li>
                     <li class="services">
-                        <a href="apartment.php">Apartment</a>
+                        <a href="apartment.php" target="blank">Apartment</a>
                   </li>
                     
                     <li><a href="#contact">Contact Us</a></li>
@@ -59,35 +64,35 @@
     <h1 class="heading">Update Finance</h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
     <div class="col-md-6 col-12 mx-auto contact_form p-3">
-                            <h1 class="heading">Enter new tenant details</h1>
-                            <form action=connect.php method=post>
+                            <h1 class="heading">Update Finance </h1>
+                            <form action=connect2.php method=post>
                                 <div class="form-group">
-                                    <label for="tname">Name</label>
-                                    <input type="name" class="form-control" id="name" name="tname">
+                                    <label for="tname">Tenant Number</label>
+                                    <input type="number" class="form-control" id="name" name="tno" placeholder="Enter the Tenant Name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="aptno">Apartment No</label>
-                                    <input type="number" class="form-control" id="name" name="aptno">
+                                    <label for="aptno">Apartment Number</label>
+                                    <input type="number" class="form-control" id="name" name="aptno" placeholder="Enter The Apartment Number" >
                                 </div>
                                 <div class="form-group">
-                                    <label for="tphone">Phone</label>
-                                    <input type="number" class="form-control" id="email" name="tphone">
+                                    <label for="tphone">Staff Salary</label>
+                                    <input type="number" class="form-control" id="email" name="staff_sal" placeholder="Enter The Phone Number">
                                 </div>
                                 <div class="form-group">
-                                    <label for="type">Type</label>
-                                    <input type="text" class="form-control" id="subject" name="type">
+                                    <label for="type">Miscellaneous Charges</label>
+                                    <input type="number" class="form-control" id="subject" name="misc_charges" placeholder="Enter The Type ">
                                 </div>
                                 <div class="form-group">
-                                    <label for="block">Block</label>
-                                    <input type="number" class="form-control" id="subject" name="block">
+                                    <label for="block">Repair Charges</label>
+                                    <input type="number" class="form-control" id="subject" name="repaircharges" placeholder="Enter The Block">
                                 </div>
                                 <div class="form-group">
                                     <label for="rent">Rent</label>
-                                    <input type="text" class="form-control" id="subject" name="rent">
+                                    <input type="number" class="form-control" id="subject" name="rent" placeholder="Enter The Rent ">
                                 </div>
                                 <div class="form-group">
                                     <label for="date">Date (DD-MM-YYYY</label>
-                                    <input type="text" class="form-control" id="subject" name="date">
+                                    <input type="date" class="form-control" id="subject" name="date" placeholder="Enter The Date(DD-MM-YYYY) ">
                                 </div>
                                 <button>Submit</button>
                             </form>

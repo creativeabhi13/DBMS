@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+if(isset($_SESSION['status']))
+{
+  echo $_SESSION['status'];
+  unset($_SESSION['status']);
+}
+
+
 
 ?>
 
@@ -24,7 +33,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/client.css">
+    <link rel="stylesheet" href="/css/admin.css">
 
 </head>
 
@@ -33,7 +42,7 @@
         <nav class="navbar">
 
             <div class="logo">
-                <a href="index.php">Abhishek & Aditya Group</a>
+                <a href="index.php" target="blank">Abhishek & Aditya Group</a>
             </div>
 
             <ul class="nav-links">
@@ -42,11 +51,11 @@
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
                 <div class="menu">
-                    <li><a href="admin.php">ADDTENANT</a></li>
-                    <li><a href="client.php">ADDDEPENDENT</a></li>
-                    <li><a href="pricing.php">FINANCE</a></li>
+                    <li><a href="addtenant.php" target="blank">ADDTENANT</a></li>
+                    <li><a href="adddependent.php" target="blank">ADDDEPENDENT</a></li>
+                    <li><a href="pricing.php" target="blank">FINANCE</a></li>
                     <li class="services">
-                        <a href="apartment.php">Apartment</a>
+                        <a href="apartment.php" target="blank">Apartment</a>
                   </li>
                     
                     <li><a href="#contact">Contact Us</a></li>
@@ -56,28 +65,41 @@
     </nav>
     </div>
 
+
+    
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-    <h1 class="heading">Add Dependent </h1>
+    <h1 class="heading">Add New Tenant </h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-                        <div class="col-md-6 col-12 mx-auto contact_form p-3">
-                            <h1 class="heading">Enter Dependent Details</h1>
-                            <form action=connect1.php method=post>
+<div class="col-md-6 col-12 mx-auto contact_form p-3">
+                            <h1 class="heading">Enter New Tenant Details</h1>
+                            <form action=connect.php method=post>
                                 <div class="form-group">
-                                    <label for="tname">Tenant Number</label>
-                                    <input type="number" class="form-control" id="name" name="tno" placeholder="Enter The Tenant Number">
+                                    <label for="tname">Name</label>
+                                    <input type="name" class="form-control" id="name" name="tname" placeholder="Enter the Tenant Name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="aptno">Dependent Name</label>
-                                    <input type="name" class="form-control" id="name" name="dname" placeholder="Enter The Dependent Name">
+                                    <label for="aptno">Apartment Number</label>
+                                    <input type="number" class="form-control" id="name" name="aptno" placeholder="Enter The Apartment Number" >
                                 </div>
                                 <div class="form-group">
-                                    <label for="dphone">Dependent Phone Number</label>
-                                    <input type="number" class="form-control" id="" name="dphone" placeholder="Enter The Dependent Phone Number">
+                                    <label for="tphone">Phone</label>
+                                    <input type="number" class="form-control" id="email" name="tphone" placeholder="Enter The Phone Number">
                                 </div>
+                                <div class="form-group">
+                                    <label for="type">Type</label>
+                                    <input type="text" class="form-control" id="subject" name="type" placeholder="Enter The Type ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="block">Block</label>
+                                    <input type="number" class="form-control" id="subject" name="block" placeholder="Enter The Block">
+                                </div>
+                               
                                
                                 <button>Submit</button>
                             </form>
                         </div>
+
+
 
 
 
@@ -122,7 +144,7 @@
                                     <textarea class="form-control" id="message" cols="30" rows="10"
                                         name="message" placeholder="Enter The Message"></textarea>
                                 </div>
-                                <button>Submit</button>
+                               <a href="admin.php"><button>Submit</button></a>
                             </form>
                         </div>
                     </div>
@@ -188,7 +210,8 @@
             </div>
             <div class="credits">
                 <h3> Designed By <a href="https://en.wikipedia.org/wiki/India"
-                        style="text-decoration: none; color:white;"> INDIA </a>
+                        style="text-decoration: none; color:white;">
+                        INDIA </a>
 
                 </h3>
             </div>
@@ -197,7 +220,6 @@
 
     <script src="/index.js"></script>
 </body>
-
 <style>
   .form-group{
     font-weight:bold;
@@ -553,5 +575,8 @@ input[type="checkbox"] {
   }
 }
 
-</style>
+    </style>
+
+
+
 </html>

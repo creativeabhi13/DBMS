@@ -9,6 +9,8 @@
 	<center>
 
 <?php 
+session_start();
+
 
 		
 		$conn = mysqli_connect("localhost", "root", "", "apt_mgmt");
@@ -25,29 +27,43 @@
 		$tphone = $_REQUEST['tphone'];
 		$type = $_REQUEST['type'];
 		$block = $_REQUEST['block'];
-		$rent = $_REQUEST['rent'];
-		$date = $_REQUEST['date'];
-		$date = date("d-m-Y",strtotime($date));
-	
+		
+		
+	    
 		
 		for ($i = 1; $i <= 99999; $i++)
 		{
-            $tno = mysqli_query($conn,"SELECT TNO FROM tenant WHERE TNO = '$tname'");
+            $tno = mysqli_query($conn,"SELECT TNO FROM tenant WHERE TNO = '$i'");
 			if (mysqli_num_rows($tno) == 0)
+			
 			{
 				$table1 = "INSERT INTO tenant VALUES ($i,'$tname', $tphone)";
 				mysqli_query($conn, $table1);
 				$table2 = "INSERT INTO apartment VALUES ($aptno,$i, '$type',$block)";
 				mysqli_query($conn, $table2);
-				$table3 = "INSERT INTO finance VALUES ($date,0,0,0,$aptno)";
-				mysqli_query($conn, $table3);
-				$table4 = "INSERT INTO rent VALUES ($date,$i,'$rent')";
-				mysqli_query($conn, $table4);
+                if(mysqli_query($conn, $table1)){
+                    $_SESSION['status']="Data Inserted Successfully";
+                    header('location: adddependent.php');
+			    } 
 				break;
-            }
-		
-			echo "<h1>DATA STORED SUCCESSFULLY !"
+				if(mysqli_query($conn, $table2)){
+                    $_SESSION['status']="Data Inserted Successfully";
+                    header('location: adddependent.php');
+			    } 
+				break;
+			
+		        
+				/* echo
+				     "<h1>DATA STORED SUCCESSFULLY !"
 				. " </h1>";
+				echo nl2br("\n$i\n $tname\n "
+				. "$tphone\n $type\n $block"); */ 
+				
+            }
+
+	    
+		
+			
 
 			
 		
@@ -60,7 +76,7 @@
 		;mysqli_close($conn);
 		?>
 
-
+<a href="index.php"> <button style="color:green">ADMIN</button> </a>
 	</center>
 </body>
 

@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if(isset($_SESSION['status']))
+{
+  echo $_SESSION['status'];
+  unset($_SESSION['status']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +37,7 @@
         <nav class="navbar">
 
             <div class="logo">
-                <a href="index.php">Abhishek & Aditya Group</a>
+                <a href="index.php" target="blank">Abhishek & Aditya Group</a>
             </div>
 
             <ul class="nav-links">
@@ -41,11 +46,11 @@
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
                 <div class="menu">
-                    <li><a href="admin.php">ADDTENANT</a></li>
-                    <li><a href="client.php">ADDDEPENDENT</a></li>
-                    <li><a href="pricing.php">FINANCE</a></li>
+                    <li><a href="addtenant.php" target="blank">ADDTENANT</a></li>
+                    <li><a href="adddependent.php" target="blank">ADDDEPENDENT</a></li>
+                    <li><a href="pricing.php" target="blank">FINANCE</a></li>
                     <li class="services">
-                        <a href="apartment.php">Apartment</a>
+                        <a href="apartment.php" target="blank">Apartment</a>
                   </li>
                     
                     <li><a href="#contact">Contact Us</a></li>
