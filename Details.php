@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if(isset($_SESSION['status']))
 {
@@ -6,11 +6,15 @@ if(isset($_SESSION['status']))
   unset($_SESSION['status']);
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apartment Management System|HOME</title>
+    <title>Apartment Management System</title>
 
 
 
@@ -25,7 +29,7 @@ if(isset($_SESSION['status']))
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/client.css">
 
 </head>
 
@@ -48,7 +52,7 @@ if(isset($_SESSION['status']))
                     <li><a href="pricing.php" target="blank">FINANCE</a></li>
                     
                     <li><a href="Table.php" target="blank">Table</a></li>
-                   <li><a href="Details.php" target="blank">Details</a></li>
+                   <li><a href="details.php" target="blank">Details</a></li>
                    <li><a href="#contact" target="blank">Contact Us</a></li>
                      <li class="services" target="blank">
                         <a href="apartment.php" target="blank">Apartment</a>
@@ -61,61 +65,20 @@ if(isset($_SESSION['status']))
     </div>
 
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-    <h1 class="heading">PHOTOS</h1>
+    <h1 class="heading">Tenant Details</h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-    <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 7</div>
-            <img src="image/APART1.jpg" style="width:100%; height:60%">
-            <div class="text">Caption Text</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 7</div>
-            <img src="image/APART2.jpg" style="width:100%; height:60%">
-            <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 7</div>
-            <img src="image/APART3.jpg" style="width:100%; height:60%">
-            <div class="text">Caption Three</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 7</div>
-            <img src="image/APART4.jpg" style="width:100%; height:60%">
-            <div class="text">Caption Three</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 7</div>
-            <img src="image/APART5.jpg" style="width:100% ; height:60%">
-            <div class="text">Caption Three</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">6 / 7</div>
-            <img src="image/APART6.jpg" style="width:100%; height:60%">
-            <div class="text">Caption Three</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">7 / 7</div>
-            <img src="image/APART7.jpg" style="width:100%; height:60%">
-            <div class="text">Caption Three</div>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+                        <div class="col-md-6 col-12 mx-auto contact_form p-3">
+                            <h1 class="heading">Enter the Tenant Number</h1>
+                            <form action=connect4.php method=post>
+                                <div class="form-group">
+                                    <label for="tumber">Tenant Number</label>
+                                    <input type="number" class="form-control" id="name" name="tno" placeholder="Enter The Tenant Number">
+                                </div>
+                                
+                               
+                                <button>Submit</button>
+                            </form>
+                        </div>
 
 
 
@@ -136,7 +99,7 @@ if(isset($_SESSION['status']))
                                     <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
                                         marginheight="0" marginwidth="0"
                                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14306.47724495984!2d84.1872534!3d26.3064385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1ac8d21b370de87d!2sCreativeabhi13!5e0!3m2!1sen!2sin!4v1635618923096!5m2!1sen!2sin"></iframe>
-                         
+
                                 </div>
                             </div>
                         </div>
@@ -233,27 +196,14 @@ if(isset($_SESSION['status']))
         </section>
     </footer>
 
-    <script >
-        var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); 
-} 
-    </script>
+    <script src="/index.js"></script>
 </body>
 
-
-
 <style>
+  .form-group{
+    font-weight:bold;
+    font-style:sans-serif;
+  }
     * {
   margin: 0;
   padding: 0;
@@ -604,6 +554,5 @@ input[type="checkbox"] {
   }
 }
 
-    </style>
-
+</style>
 </html>

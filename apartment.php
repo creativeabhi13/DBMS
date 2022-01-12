@@ -49,11 +49,14 @@ if(isset($_SESSION['status']))
                     <li><a href="addtenant.php" target="blank">ADDTENANT</a></li>
                     <li><a href="adddependent.php" target="blank">ADDDEPENDENT</a></li>
                     <li><a href="pricing.php" target="blank">FINANCE</a></li>
-                    <li class="services">
+                    
+                    <li><a href="Table.php" target="blank">Table</a></li>
+                    <li><a href="details.php" target="blank">Details</a></li>
+                   <li><a href="#contact" target="blank">Contact Us</a></li>
+                     <li class="services" target="blank">
                         <a href="apartment.php" target="blank">Apartment</a>
                   </li>
-                    
-                    <li><a href="#contact">Contact Us</a></li>
+                
                 </div>
     </div>
     </ul>

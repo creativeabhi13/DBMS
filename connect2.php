@@ -34,10 +34,10 @@ session_start();
 		
 	
 	
-				$table1 = "INSERT INTO finance VALUES ($date,$repaircharges, $staff_sal,$misc_charges,$aptno)";
+				$table1 = "INSERT INTO finance VALUES ('$date',$repaircharges, $staff_sal,$misc_charges,$aptno)";
 			
              
-				$table2 = "INSERT INTO rent VALUES ($date,$tno,$rent)";
+				$table2 = "INSERT INTO rent VALUES ('$date',$tno,$rent)";
 			
                 if(mysqli_query($conn, $table1)){
                     $_SESSION['status']="Data Inserted Successfully";

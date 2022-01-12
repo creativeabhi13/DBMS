@@ -30,7 +30,7 @@ session_start();
 		
 			
 			$table1 = "INSERT INTO dependent VALUES ($tno, '$dname','$dphone')";
-			mysqli_query($conn, $table1);
+			
 
 			if(mysqli_query($conn, $table1)){
                $_SESSION['status']="Data Inserted Successfully";
