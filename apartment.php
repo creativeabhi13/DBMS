@@ -50,8 +50,8 @@ if(isset($_SESSION['status']))
                     <li><a href="adddependent.php" target="blank">ADDDEPENDENT</a></li>
                     <li><a href="pricing.php" target="blank">FINANCE</a></li>
                     
-                    <li><a href="Table.php" target="blank">Table</a></li>
-                    <li><a href="details.php" target="blank">Details</a></li>
+                      <li><a href="Update.php" target="blank">Update Details</a></li>
+                    <li><a href="Details.php" target="blank">Details</a></li>
                    <li><a href="#contact" target="blank">Contact Us</a></li>
                      <li class="services" target="blank">
                         <a href="apartment.php" target="blank">Apartment</a>

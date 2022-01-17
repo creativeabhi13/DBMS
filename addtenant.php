@@ -55,8 +55,8 @@ if(isset($_SESSION['status']))
                     <li><a href="adddependent.php" target="blank">ADDDEPENDENT</a></li>
                     <li><a href="pricing.php" target="blank">FINANCE</a></li>
                     
-                    <li><a href="Table.php" target="blank">Table</a></li>
-                    <li><a href="details.php" target="blank">Details</a></li>
+                     <li><a href="Update.php" target="blank">Update Details</a></li>
+                    <li><a href="Details.php" target="blank">Details</a></li>
                    <li><a href="#contact" target="blank">Contact Us</a></li>
                      <li class="services" target="blank">
                         <a href="apartment.php" target="blank">Apartment</a>
@@ -73,9 +73,9 @@ if(isset($_SESSION['status']))
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
     <h1 class="heading">Add New Tenant </h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-<div class="col-md-6 col-12 mx-auto contact_form p-3">
+<div class="col-md-6 col-12 mx-auto contact_form p-3" id="form">
                             <h1 class="heading">Enter New Tenant Details</h1>
-                            <form action=connect.php method=post>
+                            <form action=connect.php method=post class="form">
                                 <div class="form-group">
                                     <label for="tname">Name</label>
                                     <input type="name" class="form-control" id="name" name="tname" placeholder="Enter the Tenant Name">
@@ -224,6 +224,11 @@ if(isset($_SESSION['status']))
     <script src="/index.js"></script>
 </body>
 <style>
+  #form
+  {
+    background-image: url("image/apt66.jpg");
+ 
+  }
   .form-group{
     font-weight:bold;
     font-style:sans-serif;
@@ -419,6 +424,7 @@ input[type="checkbox"] {
 
 #contact .contact_form {
   background: yellowgreen;
+
 }
 
 #contact form label {

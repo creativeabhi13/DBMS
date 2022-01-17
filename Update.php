@@ -51,8 +51,8 @@ if(isset($_SESSION['status']))
                     <li><a href="adddependent.php" target="blank">ADDDEPENDENT</a></li>
                     <li><a href="pricing.php" target="blank">FINANCE</a></li>
                     
-                    <li><a href="Table.php" target="blank">Table</a></li>
-                   <li><a href="details.php" target="blank">Details</a></li>
+                     <li><a href="Update.php" target="blank">Update Details</a></li>
+                   <li><a href="Details.php" target="blank">Details</a></li>
                    <li><a href="#contact" target="blank">Contact Us</a></li>
                      <li class="services" target="blank">
                         <a href="apartment.php" target="blank">Apartment</a>
@@ -65,14 +65,34 @@ if(isset($_SESSION['status']))
     </div>
 
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-    <h1 class="heading">Add Dependent </h1>
+    <h1 class="heading">Update Tenant </h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-                        <div class="col-md-6 col-12 mx-auto contact_form p-3">
-                            <h1 class="heading">Enter Dependent Details</h1>
-                            <form action=connect1.php method=post>
+                        <div class="col-md-6 col-12 mx-auto contact_form p-3" id="form">
+<h1 class="heading">Update Tenant Details</h1>
+                            <form action=connect5.php method=post>
                                 <div class="form-group">
-                                    <label for="tname">Tenant Number</label>
-                                    <input type="number" class="form-control" id="name" name="tno" placeholder="Enter The Tenant Number">
+                                    <label for="tname">Name</label>
+                                    <input type="name" class="form-control" id="name" name="tname" placeholder="Enter the Tenant Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tno">Tenant Number</label>
+                                    <input type="number" class="form-control" id="name" name="tno" placeholder="Enter The Tenant Number" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="aptno">Apartment Number</label>
+                                    <input type="number" class="form-control" id="name" name="aptno" placeholder="Enter The Apartment Number" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="tphone">Phone</label>
+                                    <input type="number" class="form-control" id="email" name="tphone" placeholder="Enter The Phone Number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="type">Type</label>
+                                    <input type="text" class="form-control" id="subject" name="type" placeholder="Enter The Type ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="block">Block</label>
+                                    <input type="number" class="form-control" id="subject" name="block" placeholder="Enter The Block">
                                 </div>
                                 <div class="form-group">
                                     <label for="aptno">Dependent Name</label>
@@ -82,6 +102,7 @@ if(isset($_SESSION['status']))
                                     <label for="dphone">Dependent Phone Number</label>
                                     <input type="number" class="form-control" id="" name="dphone" placeholder="Enter The Dependent Phone Number">
                                 </div>
+                               
                                
                                 <button>Submit</button>
                             </form>
@@ -207,6 +228,11 @@ if(isset($_SESSION['status']))
 </body>
 
 <style>
+  #form
+  {
+    background-image: url("image/apt66.jpg");
+ 
+  }
   .form-group{
     font-weight:bold;
     font-style:sans-serif;

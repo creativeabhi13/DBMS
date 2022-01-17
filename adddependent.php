@@ -50,8 +50,7 @@ if(isset($_SESSION['status']))
                     <li><a href="addtenant.php" target="blank">ADDTENANT</a></li>
                     <li><a href="adddependent.php" target="blank">ADDDEPENDENT</a></li>
                     <li><a href="pricing.php" target="blank">FINANCE</a></li>
-                    
-                    <li><a href="Table.php" target="blank">Table</a></li>
+                      <li><a href="Update.php" target="blank">Update Details</a></li>
                    <li><a href="details.php" target="blank">Details</a></li>
                    <li><a href="#contact" target="blank">Contact Us</a></li>
                      <li class="services" target="blank">
@@ -67,7 +66,7 @@ if(isset($_SESSION['status']))
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
     <h1 class="heading">Add Dependent </h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
-                        <div class="col-md-6 col-12 mx-auto contact_form p-3">
+                        <div class="col-md-6 col-12 mx-auto contact_form p-3" id="form">
                             <h1 class="heading">Enter Dependent Details</h1>
                             <form action=connect1.php method=post>
                                 <div class="form-group">
@@ -207,6 +206,11 @@ if(isset($_SESSION['status']))
 </body>
 
 <style>
+  #form
+  {
+    background-image: url("image/apt66.jpg");
+ 
+  }
   .form-group{
     font-weight:bold;
     font-style:sans-serif;
