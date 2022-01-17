@@ -79,6 +79,23 @@ if(isset($_SESSION['status']))
                                 <button>Submit</button>
                             </form>
                         </div>
+    <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
+    <h1 class="heading">Delete tenant</h1>
+    <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
+    
+    
+                        <div class="col-md-6 col-12 mx-auto contact_form p-3" id="form">
+                            <h1 class="heading">Enter the Tenant Number</h1>
+                            <form action=connect6.php method=post>
+                                <div class="form-group">
+                                    <label for="tumber">Tenant Number</label>
+                                    <input type="number" class="form-control" id="name" name="tno" placeholder="Enter The Tenant Number">
+                                </div>
+                                
+                               
+                                <button>Submit</button>
+                            </form>
+                        </div>
 
 
 
