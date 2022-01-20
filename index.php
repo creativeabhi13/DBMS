@@ -60,6 +60,18 @@ if(isset($_SESSION['status']))
     </nav>
     </div>
 
+<!-- <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
+    <h1 class="heading">LOGIN</h1>
+    <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
+<form action="login.php" method="post" class="col-md-6 col-12 mx-auto contact_form p-3" >
+    <label>UserName :</label>
+    <input type="text" name="username"/><br />
+    <label>Password :</label>
+    <input type="password" name="password"/><br/>
+    <input type="submit" value=" Login "/><br />
+</form>  -->
+
+
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
     <h1 class="heading">PHOTOS</h1>
     <hr style="color:red; display: block;    overflow: hidden; border-style: inset; border-width: 7px;">
