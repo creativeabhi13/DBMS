@@ -1,6 +1,4 @@
-
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,8 +7,7 @@
 
 <body>
 	<center>
-
-<?php 
+		<?php 
 session_start();
 
 		
@@ -53,10 +50,10 @@ $tno = $_REQUEST['tno'];
 				
 
 ;mysqli_close($conn);?>
-<a href="Details.php"> <button style="color:black; background-color:red;">ADMIN</button> </a>
+			<a href="Details.php">
+				<button style="color:black; background-color:red;">ADMIN</button>
+			</a>
 	</center>
 </body>
 
 </html>
-
-

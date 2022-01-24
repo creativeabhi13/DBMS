@@ -7,8 +7,7 @@
 
 <body>
 	<center>
-
-<?php
+		<?php
 session_start();
 		
 		$conn = mysqli_connect("localhost", "root", "", "apt_mgmt");
@@ -46,11 +45,10 @@ session_start();
 		
 		mysqli_close($conn);
 		?>
-<a href="index.php"> <button style="color:black; background-color:red;">ADMIN</button> </a>
-
+			<a href="index.php">
+				<button style="color:black; background-color:red;">ADMIN</button>
+			</a>
 	</center>
 </body>
 
 </html>
-
-

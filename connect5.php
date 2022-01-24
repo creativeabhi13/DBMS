@@ -7,8 +7,7 @@
 
 <body>
 	<center>
-
-<?php 
+		<?php 
 session_start();
 
 
@@ -75,34 +74,14 @@ session_start();
 			    } 
 			
 			
-		        
-				/* echo
-				     "<h1>DATA STORED SUCCESSFULLY !"
-				. " </h1>";
-				echo nl2br("\n$i\n $tname\n "
-				. "$tphone\n $type\n $block"); */ 
-				
-            
-
-	    
-		
-			
-
-			
-		
-
-			
-
-        
-		
+		    
 		
 		;mysqli_close($conn);
 		?>
-
-<a href="index.php"> <button style="color:green">ADMIN</button> </a>
+			<a href="index.php">
+				<button style="color:green">ADMIN</button>
+			</a>
 	</center>
 </body>
 
 </html>
-
-

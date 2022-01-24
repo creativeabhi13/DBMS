@@ -1,6 +1,4 @@
-
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,8 +7,7 @@
 
 <body>
 	<center>
-
-<?php 
+		<?php 
 session_start();
 
 		
@@ -120,30 +117,14 @@ echo "<br/>";echo "<br/>";
 
 
 }
-/* $result = mysqli_query($conn,"SELECT * FROM apartment,tenant where tenant.tno=$tno and apt.tno=tenant.tno");
 
-while($row = mysqli_fetch_array($result))
-
-{
-
-
-
-
-echo $row['DATE '] . " " . $row['REPAIR_CHARGES']. " " . $row['STAFF_SALARIES']. " " . $row['MISC_CHARGES'];
-echo "<br/>";
-echo $row['DNAME'] . " " . $row['DPHONE'];
-echo "<br/>";
-echo $row['DATE'] . " " . $row['AMOUNT'];
-echo "<br/>";
-
-} */
 
 
 ;mysqli_close($conn);?>
-<a href="Details.php"> <button style="color:black; background-color:red;">ADMIN</button> </a>
+			<a href="Details.php">
+				<button style="color:black; background-color:red;">ADMIN</button>
+			</a>
 	</center>
 </body>
 
 </html>
-
-

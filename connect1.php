@@ -7,28 +7,17 @@
 
 <body>
 	<center>
-
-<?php 
+		<?php 
 session_start();
-
-		
 		$conn = mysqli_connect("localhost", "root", "", "apt_mgmt");
-		
-		
 		if($conn === false){
 			die("ERROR: Could not connect. "
 				. mysqli_connect_error());
 		}
-		
-		
 		$tno = $_REQUEST['tno'];
 		$dname = $_REQUEST['dname'];
 		$dphone = $_REQUEST['dphone'];
 		
-	
-		
-		
-			
 			$table1 = "INSERT INTO dependent VALUES ($tno, '$dname','$dphone')";
 			
 
@@ -42,23 +31,11 @@ session_start();
 				    . mysqli_error($conn);
 		    }	
         
-			/* echo "<h1>DATA STORED SUCCESSFULLY !"
-				. " </h1>";
-
-			echo nl2br("\n$tno\n $dname\n "
-				. "$dphone\n"); */
-			 
-          
-
-
-		
-			
-
-        ;mysqli_close($conn);?>
-<a href="index.php"> <button style="color:black; background-color:red;">ADMIN</button> </a>
+   ;mysqli_close($conn);?>
+			<a href="index.php">
+				<button style="color:black; background-color:red;">ADMIN</button>
+			</a>
 	</center>
 </body>
 
 </html>
-
-

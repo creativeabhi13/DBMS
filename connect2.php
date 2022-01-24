@@ -7,8 +7,7 @@
 
 <body>
 	<center>
-
-<?php 
+		<?php 
 session_start();
 		
 		$conn = mysqli_connect("localhost", "root", "", "apt_mgmt");
@@ -29,12 +28,7 @@ session_start();
 		$rent = $_REQUEST['rent'];
 		$date = $_REQUEST['date'];
 		
-	    
-		
-		
-	
-	
-				$table1 = "INSERT INTO finance VALUES ('$date',$repaircharges, $staff_sal,$misc_charges,$aptno)";
+	    	$table1 = "INSERT INTO finance VALUES ('$date',$repaircharges, $staff_sal,$misc_charges,$aptno)";
 			
              
 				$table2 = "INSERT INTO rent VALUES ('$date',$tno,$rent)";
@@ -48,22 +42,14 @@ session_start();
                     $_SESSION['status']="Data Inserted Successfully";
                     header('location: pricing.php');
 			    } 
-            
-
-                /*  echo 
-				    "DATA SAVED SUCCESSFULLY";
-                echo nl2br("\n$tno\n $aptno\n "
-				    ."$staff_sal\n $misc_charges\n $repaircharges \n$rent\n$date"); */
-			
-				 
+             
 		
 		;mysqli_close($conn);
 		?>
-
-<a href="index.php"> <button style="color:black; background-color:red;">ADMIN</button> </a>
+			<a href="index.php">
+				<button style="color:black; background-color:red;">ADMIN</button>
+			</a>
 	</center>
 </body>
 
 </html>
-
-
