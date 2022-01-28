@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2022 at 05:53 PM
+-- Generation Time: Jan 28, 2022 at 05:46 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -57,9 +57,11 @@ CREATE TABLE `apartment` (
 --
 
 INSERT INTO `apartment` (`APTNO`, `TNO`, `TYPE`, `BLOCK`) VALUES
-(4, 3, '3bhk', 2),
 (1001, 1, '9 bhk', 9),
-(1002, 2, '2BHK', 1);
+(1002, 2, '2BHK', 1),
+(1003, 3, '3BHK', 3),
+(1051, 5, '2 BHK', 2),
+(1078, 4, '4BHK', 1);
 
 -- --------------------------------------------------------
 
@@ -79,6 +81,7 @@ CREATE TABLE `contact_us` (
 --
 
 INSERT INTO `contact_us` (`Name`, `Email`, `Subject`, `Message`) VALUES
+('ADITYA KRISHNAN', 'ADITYA123@GMAIL.COM', 'REGARDING  2BHK HOUSE', 'HEY, THIS IS ADITYA I AM LOOKING FOR 2 BHK HOUSE NEAR J BLOCK ,AMAUSI ROAD LUCKNOW'),
 ('bhupinder singh', 'BHUPI@GMAIL.COM', 'I WANT 3 BHK LAND NEAR KONKUNT', 'PLEASE REACH OUT ME \r\nMY WHATSAPP IS WA.ME/918603944898');
 
 -- --------------------------------------------------------
@@ -99,7 +102,10 @@ CREATE TABLE `dependent` (
 
 INSERT INTO `dependent` (`TNO`, `DNAME`, `DPHONE`) VALUES
 (1, 'harsh soni', 2147483647),
-(2, 'M SUMESH', 2147483647);
+(2, 'M SUMESH', 2147483647),
+(3, 'R NAMBIAR', 70787889),
+(4, 'DHIRU M', 860394489),
+(5, 'M SINGH', 60987867);
 
 -- --------------------------------------------------------
 
@@ -121,7 +127,10 @@ CREATE TABLE `finance` (
 
 INSERT INTO `finance` (`DATE`, `REPAIR_CHARGES`, `STAFF_SALARIES`, `MISC_CHARGES`, `APTNO`) VALUES
 ('0000-00-00', 340, 120, 250, 1002),
-('2021-01-12', 1200, 500, 270, 1001);
+('2021-01-12', 1200, 500, 270, 1001),
+('2022-01-27', 1208, 1201, 1110, 1003),
+('2022-01-29', 1500, 1234, 1000, 1078),
+('2022-01-31', 1000, 1110, 1200, 1051);
 
 -- --------------------------------------------------------
 
@@ -141,7 +150,10 @@ CREATE TABLE `rent` (
 
 INSERT INTO `rent` (`DATE`, `TNO`, `AMOUNT`) VALUES
 ('2021-01-12', 1, 20000),
-('0000-00-00', 2, 23000);
+('0000-00-00', 2, 23000),
+('2022-01-27', 3, 25000),
+('2022-01-29', 4, 35000),
+('2022-01-31', 5, 20000);
 
 -- --------------------------------------------------------
 
@@ -162,7 +174,9 @@ CREATE TABLE `tenant` (
 INSERT INTO `tenant` (`TNO`, `TNAME`, `TPHONE`) VALUES
 (1, 'poorvi soni', 898765544),
 (2, 'Ajin Sumesh', 2147483647),
-(3, 'arun kumar n', 87676543);
+(3, 'ADITYA KRISHNAN', 787971756),
+(4, 'VINAY M', 89876574),
+(5, 'BHUPINDER SINGH', 98887665);
 
 --
 -- Indexes for dumped tables
