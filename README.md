@@ -15,7 +15,7 @@ database. The monthly rent can be entered for each resident which
 can save time. With this application, enable property managers to 
 keep track and maintain records of their entire property easily. Any 
 important information such as available blocks, flats, details of 
-residents, rent paid can be found with just a click of a button
+residents, rent paid can be found with just a click of a button.
 
 ![image](https://user-images.githubusercontent.com/76790667/153556020-7ab652a2-8aea-4d18-8141-aa27bdcb772b.png)
 ![image](https://user-images.githubusercontent.com/76790667/153556046-cda99bfe-4963-4883-95a0-d8ecd9197a61.png)
